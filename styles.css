@@ -206,3 +206,21 @@ footer.site-footer a:hover {
   font-weight: 650;
   margin: 2rem 0 0.6rem;
 }
+
+.page ul {
+  margin: 0.6rem 0;
+  padding-left: 1.4rem;
+}
+
+.page li {
+  padding: 0.2rem 0;
+}
+
+.page p + p {
+  margin-top: 0.9rem;
+}
+
+.card-links {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
