@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Return to UpRange — Asuka Technologies LLC</title>
+  <meta name="description" content="Return to the UpRange app after visiting Stripe checkout or billing.">
+  <!-- Not useful in search results, and it can only ever be reached by
+       redirect from Stripe. -->
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Page-specific only; everything else comes from the shared stylesheet. */
+    .return-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .return-card p:last-child { margin-bottom: 0; }
+    .muted { color: var(--text-muted); font-size: 0.925rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Asuka Technologies LLC</a>
+      <nav>
+        <a href="../support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page">
+      <h1>Return to UpRange</h1>
+
+      <!--
+        DELIBERATELY NEUTRAL WORDING.
+
+        Stripe sends BOTH success_url and cancel_url here (stripe-checkout and
+        stripe-portal all default to this page), and this page has no way to
+        tell those apart — the redirect carries no parameters, on purpose. So it
+        must read correctly whether the person paid, backed out, or just looked
+        at an invoice.
+
+        Do not add "Thanks for subscribing!" here. It would be a lie to anyone
+        who cancelled, and they would switch back to the app expecting access.
+
+        It also must not claim to be the source of truth. Entitlement is written
+        only by the stripe-webhook function after Stripe confirms payment; this
+        page is just somewhere for the browser to land.
+      -->
+      <p>You can close this tab and switch back to the UpRange app.</p>
+
+      <div class="return-card">
+        <p><strong>If you completed a payment,</strong> your subscription is
+        activated automatically — usually within a few seconds. Open UpRange and
+        it will pick it up on its own. There is nothing to copy over.</p>
+      </div>
+
+      <div class="return-card">
+        <p><strong>If you changed your mind,</strong> nothing was charged and
+        nothing has changed on your account.</p>
+      </div>
+
+      <p class="muted">Still seeing the subscribe screen after a minute? Tap
+      <em>I already subscribed</em> in the app to check again. If it still
+      doesn&rsquo;t appear, email
+      <a href="mailto:contact@asukatechnologies.com">contact@asukatechnologies.com</a>
+      and we&rsquo;ll sort it out — your payment is recorded with Stripe either
+      way.</p>
+
+      <!--
+        OPTIONAL: automatic bounce back into the app.
+
+        Not enabled, and not needed today. The app's paywall lives at AuthGate,
+        so the user returns to the very screen they left and it re-checks
+        entitlement when the app comes to the foreground. This would only save
+        them tapping "Done" in the browser.
+
+        Turning it on requires app-side work FIRST, or the link silently does
+        nothing:
+          1. iOS  — add CFBundleURLTypes to Info.plist (none exists yet)
+          2. Android — add an intent-filter for the scheme
+          3. Register linking config on NavigationContainer (AppNavigator
+             currently notes it has none)
+
+        A custom scheme is enough — no apple-app-site-association or
+        assetlinks.json, so it does not depend on the release keystore. Any app
+        can claim a custom scheme, which is safe here ONLY because this URL
+        carries no session id, token, or status. Keep it parameterless.
+
+        <p><a class="button" href="uprange://billing/return">Open UpRange</a></p>
+      -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="../support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <div>© 2026 Asuka Technologies LLC. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
