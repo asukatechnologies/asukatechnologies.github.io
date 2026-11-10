@@ -224,3 +224,40 @@ footer.site-footer a:hover {
   margin-top: 0.9rem;
   font-size: 0.9rem;
 }
+
+.page h3 {
+  font-size: 1.02rem;
+  font-weight: 650;
+  margin: 1.4rem 0 0.5rem;
+}
+
+.page .doc-owner {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+
+.legal {
+  overflow-wrap: break-word;
+}
+
+.product {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.product-logo {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 5%;
+}
+
+@media (max-width: 26rem) {
+  .product {
+    flex-direction: column;
+  }
+}
