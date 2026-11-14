@@ -207,9 +207,14 @@ footer.site-footer a:hover {
   margin: 2rem 0 0.6rem;
 }
 
-.page ul {
+.page ul,
+.page ol {
   margin: 0.6rem 0;
   padding-left: 1.4rem;
+}
+
+.page li > ul {
+  margin: 0.4rem 0 0.2rem;
 }
 
 .page li {

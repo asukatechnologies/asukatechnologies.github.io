@@ -13,6 +13,8 @@ Live at <https://asukatechnologies.github.io>.
 - `dando/index.html` — the Dando app page (kept general while the app is in internal
   testing)
 - `dando/privacy.html` — Dando Privacy Policy
+- `dando/delete-account.html` — how to delete a Dando account, in the app or by email
+  (the account deletion URL for Google Play's Data safety form)
 - `dando/terms.html` — Dando Terms of Use
 - `dando/beta.html` — Dando Beta Test License Agreement (unlisted: not linked from
   the site, sent to invited testers by link)
