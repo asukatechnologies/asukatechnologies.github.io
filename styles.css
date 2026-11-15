@@ -207,9 +207,14 @@ footer.site-footer a:hover {
   margin: 2rem 0 0.6rem;
 }
 
-.page ul {
+.page ul,
+.page ol {
   margin: 0.6rem 0;
   padding-left: 1.4rem;
+}
+
+.page li > ul {
+  margin: 0.4rem 0 0.2rem;
 }
 
 .page li {
@@ -259,5 +264,52 @@ footer.site-footer a:hover {
 @media (max-width: 26rem) {
   .product {
     flex-direction: column;
+  }
+}
+
+/* Dando page (dando/index.html) */
+.app-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.app-hero h1 {
+  margin-bottom: 0.2rem;
+}
+
+.app-hero .tag {
+  font-size: 0.7rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+
+.feature h3 {
+  font-size: 1.02rem;
+  font-weight: 650;
+  margin-bottom: 0.3rem;
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 26rem) {
+  .app-hero {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
