@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect glasses to Dando — Asuka Technologies LLC</title>
+  <meta name="description" content="Return to the Dando app after connecting Meta glasses in the Meta AI app.">
+  <!-- Only reached when the Universal Link below does not open the app. -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="../dando-icon.svg">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../index.html">Asuka Technologies LLC</a>
+      <nav>
+        <a href="../../support.html">Support</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page">
+      <h1>Connect glasses to Dando</h1>
+
+      <!--
+        This path is the iOS Universal Link registered in the Meta Wearables
+        Developer Center (https://asukatechnologies.com/dando/wearables). After
+        the user approves Dando in the Meta AI app, Meta AI opens this URL and
+        iOS hands it to Dando, which passes it to the Meta Wearables SDK. The
+        claim lives in /.well-known/apple-app-site-association.
+
+        People only see this page when iOS did not open the app (Dando not
+        installed, or the link opened in a browser). Keep it short and
+        parameter-free in what it says: the callback URL may carry query
+        parameters meant for the SDK, never for this page.
+      -->
+      <p>This link finishes connecting Meta glasses to the Dando app. Open it on
+      the iPhone where Dando is installed, or switch back to Dando and try
+      connecting again.</p>
+
+      <p>Need help? Email
+      <a href="mailto:support@asukatechnologies.com">support@asukatechnologies.com</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="../../support.html">Support</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+      <div>© 2026 Asuka Technologies LLC. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

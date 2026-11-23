@@ -19,6 +19,13 @@ Live at <https://asukatechnologies.github.io>.
 - `dando/beta.html` — Dando Beta Test License Agreement (unlisted: not linked from
   the site, sent to invited testers by link)
 - `dando/billing-return.html` — where Stripe checkout and the billing portal return
+- `dando/wearables/index.html` — fallback page for the Meta glasses iOS Universal Link
+  (`https://asukatechnologies.com/dando/wearables`, set in the Meta Wearables Developer
+  Center); seen only when iOS does not open the app
+- `.well-known/apple-app-site-association` — iOS Universal Link claim: lets Dando
+  (`R4F328X67Y.com.asukatechnologies.dando`) open `/dando/wearables`. Published because
+  `_config.yml` includes `.well-known` (Jekyll skips dot-folders otherwise). Must be
+  served without redirects
 - `dando/dando-logo.svg` — the app icon with rounded corners (wordmark at 52% of the
   width, 5% corner radius), drawn with the app repo's `scripts/brand-geometry.mjs`
 - `dando/dando-icon.svg` — browser-tab icon, copied from the app repo's `brand/`

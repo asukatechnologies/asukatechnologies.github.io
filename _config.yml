@@ -1,0 +1,5 @@
+# GitHub Pages builds this site with Jekyll, which skips dot-folders by default.
+# .well-known/apple-app-site-association must be published for iOS Universal
+# Links (the Meta glasses callback at /dando/wearables), so include it.
+include:
+  - .well-known
