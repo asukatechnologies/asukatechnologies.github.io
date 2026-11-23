@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R4F328X67Y.com.asukatechnologies.dando"],
+        "components": [
+          {
+            "/": "/dando/wearables",
+            "comment": "Meta Wearables Device Access Toolkit callback (Meta AI app registration and permissions)"
+          },
+          {
+            "/": "/dando/wearables/*",
+            "comment": "Meta Wearables Device Access Toolkit callback, any sub-path"
+          }
+        ]
+      }
+    ]
+  }
+}
