@@ -21,7 +21,7 @@ Live at <https://asukatechnologies.github.io>.
 - `dando/billing-return.html` — where Stripe checkout and the billing portal return
 - `dando/wearables/index.html` — fallback page for the Meta glasses iOS Universal Link
   (`https://asukatechnologies.com/dando/wearables`, set in the Meta Wearables Developer
-  Center); seen only when iOS does not open the app
+  Center); seen only when the app does not open. Android uses a custom scheme instead
 - `.well-known/apple-app-site-association` — iOS Universal Link claim: lets Dando
   (`R4F328X67Y.com.asukatechnologies.dando`) open `/dando/wearables`. Published because
   `_config.yml` includes `.well-known` (Jekyll skips dot-folders otherwise). Must be

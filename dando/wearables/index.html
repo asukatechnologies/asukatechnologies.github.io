@@ -33,14 +33,19 @@
         iOS hands it to Dando, which passes it to the Meta Wearables SDK. The
         claim lives in /.well-known/apple-app-site-association.
 
-        People only see this page when iOS did not open the app (Dando not
-        installed, or the link opened in a browser). Keep it short and
-        parameter-free in what it says: the callback URL may carry query
-        parameters meant for the SDK, never for this page.
+        Android does not use this URL: there the Meta AI app returns to Dando
+        through a custom URL scheme set in the app's manifest, so there is no
+        assetlinks.json for this path.
+
+        People only see this page when the app did not open (Dando not
+        installed, an Android phone, or the link opened in a browser). Keep the
+        wording platform-neutral, and short and parameter-free in what it says:
+        the callback URL may carry query parameters meant for the SDK, never
+        for this page.
       -->
-      <p>This link finishes connecting Meta glasses to the Dando app. Open it on
-      the iPhone where Dando is installed, or switch back to Dando and try
-      connecting again.</p>
+      <p>This link is used while connecting Meta glasses to the Dando app. If
+      you got here instead of the app, switch back to Dando on your phone and
+      try connecting the glasses again.</p>
 
       <p>Need help? Email
       <a href="mailto:support@asukatechnologies.com">support@asukatechnologies.com</a>.</p>
